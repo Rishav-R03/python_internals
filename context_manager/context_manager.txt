@@ -1,0 +1,20 @@
+Python’s context managers provide a neat way to automatically set up and clean up resources, ensuring they’re properly managed even if errors occur.
+Why Do We Need Context Managers?
+Automatic cleanup: Frees resources like files or connections without manual effort.
+Avoid resource leaks: Ensures proper release, even if errors occur.
+Cleaner code: Replaces verbose try-finally blocks with with.
+Exception-safe: Always performs cleanup, even on exceptions.
+Custom control: Lets you manage any resource using __enter__ and __exit__.
+
+Built-in Context Manager for File Handling
+File operations are a common case in Python where proper resource management is crucial. The with statement provides a built-in context manager that ensures file is automatically closed once you're done with it, even if an error occurs.
+
+with open("test.txt") as f:
+    data = f.read()
+
+Creating Custom Context Manager Class
+A class-based context manager needs two methods:
+
+__enter__(): sets up the resource and returns it.
+__exit__(): cleans up the resource (e.g., closes a file).
+

@@ -1,0 +1,26 @@
+Decorators
+Decorators are flexible way to modify or extend behavior of functions or methods, without changing their actual code.
+A decorator is essentially a function that takes another function as an argument and returns a new function with enhanced functionality.
+They are often used in scenarios such as logging, authentication and memoization, allowing us to add additional functionality to existing
+ functions or methods in a clean, reusable way.
+
+Functions as First-Class Objects
+Functions are first-class objects,
+meaning they can be treated like any other object (such as integers, strings or lists).
+This allows functions to be assigned to variables, passed as arguments, returned from other functions
+and stored in data structures, including decorators.
+
+Higher-Order Functions
+Higher-order functions are functions that either take other functions as input, 
+return a function as output, or both. They allow functions to be treated like data, making code more flexible and reusable.
+
+2. Method Decorators: Special decorators used for methods inside a class. 
+They work like function decorators but handle the self parameter for instance methods.
+
+3. Class Decorators: used to modify or enhance behavior of a class. Like function decorators,
+class decorators are applied to class definition. They work by taking class as an argument and returning a modified version of class.
+
+Built-in Decorators
+1. @staticmethod: used to define a method that doesn't operate on an instance of class (i.e., it doesn't use self). Static methods are called on class itself, not on an instance of class.
+2. @classmethod: used to define a method that operates on class itself (i.e., it uses cls). Class methods can access and modify class state that applies across all instances of class.
+3. @property: used to define a method as a property, which allows to access it like an attribute. This is useful for encapsulating implementation of a method while still providing a simple interface.
