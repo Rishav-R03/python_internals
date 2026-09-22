@@ -1,0 +1,20 @@
+# tells where to scrape
+
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  - job_name: "prometheus"
+    static_configs:
+    - targets: ["localhost:9090"]
+  
+  - job_name: "fastapi"
+    static_configs:
+    # to reach fastapi running in my machine
+      - targets: ["host.docker.internal:8000"]
+    metrics_path: "/metrics"
+  
+
+
+
