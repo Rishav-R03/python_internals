@@ -1,5 +1,5 @@
-from app.api.v1.deps import get_http_pool
-from app.core.resources import MockHttpClientPool
+from api.v1.deps import get_http_pool
+from core.resources import MockHttpClientPool
 from fastapi import APIRouter,Depends
 
 router = APIRouter()
